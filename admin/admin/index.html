@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>مدیریت Ngermany</title>
+<style>
+:root{--bg:#f5f6f8;--panel:#fff;--ink:#17191d;--muted:#737983;--line:#e7e9ed;--accent:#20242b;--soft:#f0f1f3;--red:#d94747}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0;border-radius:10px;padding:11px 15px;background:var(--accent);color:#fff}button.secondary{background:var(--soft);color:var(--ink)}button.danger{background:#fff0f0;color:var(--red)}input,textarea,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline:none}textarea{min-height:80px;resize:vertical}.wrap{max-width:1180px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}.brand{font-size:22px;font-weight:800}.muted{color:var(--muted);font-size:13px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.login{max-width:430px;margin:10vh auto}.login h1{margin-top:0}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.tabs button{background:var(--soft);color:var(--ink)}.tabs button.active{background:var(--accent);color:#fff}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}.stat strong{display:block;font-size:26px;margin-top:8px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:grid;gap:6px}.wide{grid-column:1/-1}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:right;padding:12px;border-bottom:1px solid var(--line);font-size:13px}th{color:var(--muted);font-weight:600}.hidden{display:none!important}.msg{margin:12px 0;padding:10px;border-radius:9px;background:#f0f5ff;color:#214c8a;font-size:13px}.rowhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.small{font-size:12px}.badge{display:inline-block;background:var(--soft);padding:5px 8px;border-radius:7px}
+@media(max-width:700px){.wrap{padding:12px}.stats{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}.panel{padding:14px}}
+</style></head>
+<body>
+<div class="wrap">
+  <section id="login" class="panel login">
+    <div class="brand">Ngermany <span class="muted">/ مدیریت فروشگاه</span></div>
+    <h1>ورود مدیر</h1><p class="muted">کلید مدیریتی که در تنظیمات Cloudflare ذخیره کرده‌ای وارد کن.</p>
+    <div class="field"><label for="token">کلید دسترسی مدیر</label><input id="token" type="password" autocomplete="current-password" placeholder="ADMIN_TOKEN"></div>
+    <div class="actions"><button id="loginBtn">ورود به پنل</button></div><div id="loginMsg" class="msg hidden"></div>
+  </section>
+
+  <section id="app" class="hidden">
+    <header class="top"><div><div class="brand">Ngermany <span class="muted">پنل مدیریت</span></div><div class="muted">مدیریت محصولات، دسته‌بندی‌ها و سفارش‌ها</div></div><button class="secondary" id="logout">خروج امن</button></header>
+    <div class="stats">
+      <div class="panel stat"><span class="muted">محصولات</span><strong id="sProducts">۰</strong></div>
+      <div class="panel stat"><span class="muted">دسته‌بندی‌ها</span><strong id="sCategories">۰</strong></div>
+      <div class="panel stat"><span class="muted">سفارش‌ها</span><strong id="sOrders">۰</strong></div>
+    </div>
+    <nav class="tabs">
+      <button class="active" data-tab="products">محصولات</button><button data-tab="categories">دسته‌بندی‌ها</button><button data-tab="orders">سفارش‌ها</button>
+    </nav>
+    <div id="notice" class="msg hidden"></div>
+    <section id="products" class="panel">
+      <div class="rowhead"><h2>محصولات</h2><button id="newProduct">＋ افزودن محصول</button></div>
+      <form id="productForm" class="grid hidden">
+        <input type="hidden" id="pId">
+        <div class="field"><label>نام محصول</label><input id="pName" required></div>
+        <div class="field"><label>شناسه انگلیسی (اختیاری)</label><input id="pSlug" placeholder="sample-product"></div>
+        <div class="field"><label>قیمت اصلی (تومان)</label><input id="pPrice" type="number" min="0" required></div>
+        <div class="field"><label>قیمت با تخفیف (اختیاری)</label><input id="pDiscount" type="number" min="0"></div>
+        <div class="field"><label>موجودی</label><input id="pStock" type="number" min="0" value="0" required></div>
+        <div class="field"><label>دسته‌بندی</label><select id="pCategory"><option value="">بدون دسته</option></select></div>
+        <div class="field wide"><label>لینک تصویر محصول</label><input id="pImage" type="url" placeholder="https://..."></div>
+        <div class="field wide"><label>توضیحات</label><textarea id="pDescription"></textarea></div>
+        <div class="field"><label>وضعیت</label><select id="pStatus"><option value="active">فعال</option><option value="inactive">غیرفعال</option></select></div>
+        <div class="actions wide"><button type="submit">ذخیره محصول</button><button type="button" class="secondary" id="cancelProduct">انصراف</button></div>
+      </form>
+      <div class="tablewrap"><table><thead><tr><th>محصول</th><th>قیمت</th><th>موجودی</th><th>دسته</th><th>وضعیت</th><th>عملیات</th></tr></thead><tbody id="productsBody"></tbody></table></div>
+    </section>
+    <section id="categories" class="panel hidden">
+      <div class="rowhead"><h2>دسته‌بندی‌ها</h2></div>
+      <form id="categoryForm" class="grid">
+        <div class="field"><label>نام دسته</label><input id="cName" required></div>
+        <div class="field"><label>شناسه انگلیسی (اختیاری)</label><input id="cSlug" placeholder="digital"></div>
+        <div class="field wide"><label>توضیحات</label><input id="cDescription"></div>
+        <div class="actions wide"><button type="submit">افزودن دسته</button></div>
+      </form>
+      <div class="tablewrap"><table><thead><tr><th>نام</th><th>شناسه</th><th>توضیحات</th><th>عملیات</th></tr></thead><tbody id="categoriesBody"></tbody></table></div>
+    </section>
+    <section id="orders" class="panel hidden">
+      <div class="rowhead"><h2>سفارش‌ها</h2><button class="secondary" id="refreshOrders">به‌روزرسانی</button></div>
+      <div class="tablewrap"><table><thead><tr><th>شماره سفارش</th><th>گیرنده</th><th>تلفن</th><th>مبلغ</th><th>نشانی</th><th>وضعیت</th><th>ذخیره</th></tr></thead><tbody id="ordersBody"></tbody></table></div>
+    </section>
+  </section>
+</div>
+<script>
+const API="https://ngermany-api.samyarkhakpwr04.workers.dev";
+let auth=sessionStorage.getItem("ng_admin_token")||"", products=[], categories=[];
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money=n=>Number(n||0).toLocaleString("fa-IR")+" تومان";
+function note(s){$("notice").textContent=s;$("notice").classList.remove("hidden");}
+async function api(path,options={}){const r=await fetch(API+path,{...options,headers:{"Content-Type":"application/json","Authorization":"Bearer "+auth,...(options.headers||{})}});let d={};try{d=await r.json()}catch{}if(!r.ok)throw Error(d.error||"خطای ارتباط با سرور");return d;}
+function showApp(){ $("login").classList.add("hidden");$("app").classList.remove("hidden");loadAll();}
+function login(){auth=$("token").value.trim();if(!auth){$("loginMsg").textContent="کلید را وارد کن.";return;}api("/api/admin/summary").then(()=>{sessionStorage.setItem("ng_admin_token",auth);$("loginMsg").classList.add("hidden");showApp();}).catch(e=>{$("loginMsg").textContent=e.message;$("loginMsg").classList.remove("hidden");});}
+$("loginBtn").onclick=login;$("token").addEventListener("keydown",e=>{if(e.key==="Enter")login()});
+$("logout").onclick=()=>{sessionStorage.removeItem("ng_admin_token");auth="";$("app").classList.add("hidden");$("login").classList.remove("hidden");$("token").value="";};
+async function loadAll(){try{const [s,p,c,o]=await Promise.all([api("/api/admin/summary"),api("/api/admin/products"),api("/api/admin/categories"),api("/api/admin/orders")]);products=p.products||[];categories=c.categories||[];$("sProducts").textContent=Number(s.products).toLocaleString("fa-IR");$("sCategories").textContent=Number(s.categories).toLocaleString("fa-IR");$("sOrders").textContent=Number(s.orders).toLocaleString("fa-IR");renderProducts();renderCategories();renderOrders(o.orders||[]);fillCategories();}catch(e){note(e.message);}}
+function fillCategories(selected=""){$("pCategory").innerHTML='<option value="">بدون دسته</option>'+categories.map(c=>`<option value="${c.id}" ${String(c.id)===String(selected)?"selected":""}>${esc(c.name)}</option>`).join("");}
+function renderProducts(){$("productsBody").innerHTML=products.map(p=>`<tr><td>${esc(p.name)}</td><td>${money(p.discount_price||p.price)}</td><td>${Number(p.stock).toLocaleString("fa-IR")}</td><td>${esc(p.category_name||"—")}</td><td><span class="badge">${p.status==="active"?"فعال":"غیرفعال"}</span></td><td><button class="secondary small" onclick="editProduct(${p.id})">ویرایش</button> <button class="danger small" onclick="disableProduct(${p.id})">غیرفعال</button></td></tr>`).join("")||'<tr><td colspan="6">هنوز محصولی ثبت نشده است.</td></tr>';}
+function editProduct(id){const p=products.find(x=>x.id===id);if(!p)return;$("pId").value=p.id;$("pName").value=p.name||"";$("pSlug").value=p.slug||"";$("pPrice").value=p.price||0;$("pDiscount").value=p.discount_price??"";$("pStock").value=p.stock||0;$("pImage").value=p.image_url||"";$("pDescription").value=p.description||"";$("pStatus").value=p.status||"active";fillCategories(p.category_id);$("productForm").classList.remove("hidden");window.scrollTo({top:0,behavior:"smooth"});}
+async function disableProduct(id){if(!confirm("این محصول غیرفعال شود؟"))return;try{await api("/api/admin/products/"+id,{method:"DELETE"});note("محصول غیرفعال شد.");await loadAll();}catch(e){note(e.message);}}
+$("newProduct").onclick=()=>{$("productForm").reset();$("pId").value="";$("pStock").value=0;fillCategories();$("productForm").classList.remove("hidden");};
+$("cancelProduct").onclick=()=>$("productForm").classList.add("hidden");
+$("productForm").onsubmit=async e=>{e.preventDefault();const id=$("pId").value;const b={name:$("pName").value,slug:$("pSlug").value,price:$("pPrice").value,discount_price:$("pDiscount").value,stock:$("pStock").value,image_url:$("pImage").value,description:$("pDescription").value,category_id:$("pCategory").value,status:$("pStatus").value};try{await api(id?"/api/admin/products/"+id:"/api/admin/products",{method:id?"PUT":"POST",body:JSON.stringify(b)});$("productForm").classList.add("hidden");note("محصول ذخیره شد.");await loadAll();}catch(e){note(e.message);}};
+function renderCategories(){$("categoriesBody").innerHTML=categories.map(c=>`<tr><td>${esc(c.name)}</td><td>${esc(c.slug)}</td><td>${esc(c.description||"—")}</td><td><button class="danger small" onclick="deleteCategory(${c.id})">حذف</button></td></tr>`).join("")||'<tr><td colspan="4">دسته‌ای ثبت نشده است.</td></tr>';}
+async function deleteCategory(id){if(!confirm("دسته حذف شود؟"))return;try{await api("/api/admin/categories/"+id,{method:"DELETE"});note("دسته حذف شد.");await loadAll();}catch(e){note(e.message);}}
+$("categoryForm").onsubmit=async e=>{e.preventDefault();try{await api("/api/admin/categories",{method:"POST",body:JSON.stringify({name:$("cName").value,slug:$("cSlug").value,description:$("cDescription").value})});$("categoryForm").reset();note("دسته اضافه شد.");await loadAll();}catch(e){note(e.message);}};
+const statuses={pending:"در انتظار",processing:"در حال آماده‌سازی",shipped:"ارسال شده",delivered:"تحویل شده",cancelled:"لغو شده"};
+function renderOrders(rows){$("ordersBody").innerHTML=rows.map(o=>`<tr><td>${esc(o.order_number)}</td><td>${esc(o.recipient_name||"—")}</td><td>${esc(o.phone||"—")}</td><td>${money(o.total_price+o.shipping_cost)}</td><td>${esc([o.province,o.city,o.address,o.postal_code].filter(Boolean).join("، "))}</td><td><select id="os${o.id}">${Object.entries(statuses).map(([v,l])=>`<option value="${v}" ${o.status===v?"selected":""}>${l}</option>`).join("")}</select><div class="small muted">${o.payment_status==="paid"?"پرداخت‌شده":"پرداخت‌نشده"}</div></td><td><button class="small" onclick="saveOrder(${o.id})">ثبت</button></td></tr>`).join("")||'<tr><td colspan="7">هنوز سفارشی ثبت نشده است.</td></tr>';}
+async function saveOrder(id){try{await api("/api/admin/orders/"+id,{method:"PATCH",body:JSON.stringify({status:$("os"+id).value})});note("وضعیت سفارش به‌روزرسانی شد.");}catch(e){note(e.message);}}
+$("refreshOrders").onclick=loadAll;
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tabs button").forEach(x=>x.classList.toggle("active",x===b));["products","categories","orders"].forEach(id=>$(id).classList.toggle("hidden",id!==b.dataset.tab));});
+if(auth){$("token").value=auth;showApp();}
+</script>
+</body></html>
