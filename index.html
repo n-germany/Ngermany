@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ef394e">
+<title>فروشگاه Ngermany</title>
+<meta name="description" content="فروشگاه آنلاین Ngermany">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+:root{--red:#ef394e;--red-dark:#d92d43;--text:#3f4064;--muted:#81858b;--border:#e8e8ed;--bg:#f1f2f4;--white:#fff;--green:#00a049;--gold:#f9bc00;--radius:12px;--shadow:0 3px 15px #2026380c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,Arial,sans-serif;font-size:13px}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none;cursor:pointer}.container{width:min(1440px,calc(100% - 32px));margin:auto}
+.top-banner{height:35px;background:linear-gradient(90deg,#c90036,#ef394e,#c90036);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}.top-banner span{margin:0 6px;background:#fff;color:var(--red);padding:2px 8px;border-radius:5px}
+.site-header{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 8px #00000008}.header-main{height:78px;display:flex;align-items:center;gap:23px}.logo{color:var(--red);font-size:28px;font-weight:900;letter-spacing:-1px;white-space:nowrap}.logo small{display:block;color:#858585;font-size:9px;font-weight:400;letter-spacing:0;margin-top:-4px}.search-box{background:#f0f0f1;height:45px;border-radius:9px;display:flex;align-items:center;gap:12px;padding:0 14px;flex:1;max-width:650px}.search-box svg{width:21px;height:21px;stroke:#777;fill:none;stroke-width:2}.search-box input{background:transparent;border:0;outline:0;flex:1;min-width:0;color:#333}.search-box input::placeholder{color:#92949a}.header-actions{margin-right:auto;display:flex;align-items:center;gap:10px}.header-button{height:40px;padding:0 12px;border:1px solid var(--border);background:#fff;border-radius:8px;display:flex;align-items:center;gap:8px;color:#42445c;font-weight:700}.header-button svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8}.cart-number{background:var(--red);color:white;min-width:18px;height:18px;padding:0 5px;border-radius:20px;font-size:10px;display:flex;align-items:center;justify-content:center}
+.main-nav{height:43px;border-top:1px solid #f5f5f5;display:flex;align-items:center;gap:23px;white-space:nowrap}.main-nav a,.main-nav button{background:none;border:0;padding:0;color:#62666d;font-weight:600}.main-nav a:hover,.main-nav button:hover{color:var(--red)}.nav-category{font-weight:900!important;color:#303248!important}.nav-spacer{flex:1}.nav-location{color:#777;font-size:11px}.mega-menu{display:none;position:absolute;top:156px;right:max(16px,calc((100% - 1440px)/2));width:min(900px,calc(100vw - 32px));padding:22px;background:white;border:1px solid var(--border);border-radius:0 0 14px 14px;box-shadow:0 15px 30px #0002;grid-template-columns:repeat(4,1fr);gap:18px}.mega-menu.active{display:grid}.mega-column h4{color:#303248;margin:0 0 12px}.mega-column a{display:block;color:#777;padding:6px 0}.mega-column a:hover{color:var(--red)}
+.page-content{padding:18px 0 50px}.hero{min-height:300px;position:relative;overflow:hidden;border-radius:14px;background:linear-gradient(110deg,#191b28,#421d31 53%,#e93651);color:white;display:flex;align-items:center;padding:50px}.hero:before{content:"";position:absolute;width:450px;height:450px;border-radius:50%;background:#ffffff10;left:5%;top:-190px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff05}.hero-content{position:relative;z-index:2;max-width:550px}.hero-label{color:#ffd6dc;font-weight:800}.hero h1{font-size:clamp(26px,4vw,43px);line-height:1.6;margin:12px 0}.hero p{color:#f9e5e9;font-size:14px;line-height:2}.hero-button{border:0;background:white;color:#d52d45;font-weight:900;border-radius:8px;padding:12px 22px}.hero-art{position:absolute;left:9%;bottom:-15px;font-size:160px;transform:rotate(-9deg);filter:drop-shadow(0 15px 20px #0006)}.slider-dots{display:flex;justify-content:center;gap:7px;margin:12px}.slider-dots span{width:7px;height:7px;border-radius:20px;background:#c4c5c8}.slider-dots span.active{width:20px;background:var(--red)}
+.panel{background:white;padding:18px;border-radius:var(--radius);margin-top:18px;box-shadow:var(--shadow)}.section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.section-title h2{margin:0;color:#303248;font-size:17px}.section-title a{color:#19a0a8;font-weight:800}.category-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:10px}.category-item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:9px;cursor:pointer;padding:10px 3px;border-radius:10px;transition:.2s}.category-item:hover{background:#f8f8fa;transform:translateY(-3px)}.category-icon{width:70px;height:70px;border-radius:50%;background:#f3f4f6;display:grid;place-items:center;font-size:32px}.category-item b{font-size:12px}
+.flash-section{display:grid;grid-template-columns:180px 1fr;gap:13px;background:#e9344f;padding:16px;border-radius:14px;color:white;margin-top:18px;overflow:hidden}.flash-intro{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.flash-intro strong{font-size:23px}.flash-intro p{color:#ffe2e7}.flash-timer{direction:ltr;display:flex;gap:5px}.flash-timer span{background:white;color:#242537;border-radius:5px;padding:7px;min-width:32px;font-weight:900}.flash-products{display:flex;gap:10px;overflow-x:auto;scrollbar-width:thin;padding-bottom:4px}.flash-card{min-width:170px;max-width:170px;background:white;color:var(--text);padding:10px;border-radius:10px;cursor:pointer;position:relative}.flash-photo{height:100px;display:grid;place-items:center;border-radius:8px}.flash-photo .emoji{font-size:65px}.flash-card h3{height:38px;overflow:hidden;font-size:11px;line-height:1.8;font-weight:500}.discount-badge{background:var(--red);color:white;border-radius:20px;padding:3px 7px;font-size:10px;font-weight:900}.flash-card .discount-badge{position:absolute;top:8px;right:8px}.flash-price{text-align:left;font-weight:900;color:#303248}.flash-old{text-align:left;font-size:10px;color:#999;text-decoration:line-through}
+.benefits-row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:20px 0}.benefits-row div{background:white;border-radius:10px;padding:16px 8px;text-align:center;color:#555}.store-banners{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.store-banner{min-height:130px;border-radius:12px;padding:20px;color:white;display:flex;align-items:center;justify-content:space-between;overflow:hidden}.store-banner h2{font-size:19px;margin:0 0 7px}.store-banner p{margin:0;font-size:12px}.store-banner span{font-size:55px}.banner-one{background:linear-gradient(110deg,#303a55,#687ca7)}.banner-two{background:linear-gradient(110deg,#087c70,#24b99e)}.banner-three{background:linear-gradient(110deg,#843c51,#e86b83)}
+.catalog-section{margin-top:24px}.catalog-layout{display:grid;grid-template-columns:220px 1fr;gap:15px}.store-filters{background:white;border-radius:12px;padding:17px;height:max-content;position:sticky;top:170px}.store-filters h3{margin:0 0 15px;font-size:15px}.filter-part{border-top:1px solid #eee;padding:14px 0}.filter-part label{display:flex;align-items:center;gap:8px;margin:11px 0;font-size:12px;color:#62666d;cursor:pointer}.filter-part input{accent-color:#ef394e}.filter-part select{width:100%;border:1px solid #ddd;padding:9px;border-radius:8px;background:white;margin-top:12px}.catalog-toolbar{background:white;padding:14px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}.catalog-toolbar strong{font-size:15px}.catalog-sorts{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.store-sort{border:0;background:transparent;color:#777;padding:6px}.store-sort.active{color:#ef394e;font-weight:900}.store-product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:white;border-radius:12px;overflow:hidden;margin-top:12px}.store-product{padding:13px;border-left:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0;min-width:0;cursor:pointer;position:relative}.store-product:hover{box-shadow:0 3px 18px #00000012;z-index:2}.store-product-photo{height:160px;display:grid;place-items:center;border-radius:8px;overflow:hidden}.store-product-photo .emoji{font-size:75px}.store-product h3{font-size:12px;line-height:1.9;height:47px;overflow:hidden;font-weight:500;margin:12px 0}.store-product-meta{display:flex;justify-content:space-between;font-size:10px;color:#888;margin-bottom:10px}.store-rating{color:#e5a600}.store-product-price{font-weight:900;color:#303248;text-align:left}.store-product-old{color:#999;font-size:10px;text-align:left;text-decoration:line-through;margin-top:5px}.store-product .discount-badge{position:absolute;top:12px;right:12px}.store-heart{position:absolute;top:9px;left:9px;z-index:2;border:0;background:white;font-size:20px;color:#aaa}.store-heart.active{color:#ef394e}.store-empty{grid-column:1/-1;padding:50px;text-align:center;color:#888}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.footer-grid h3{color:#333;font-size:14px}.footer-grid a{display:block;margin:10px 0;color:#777}.copyright{text-align:center;border-top:1px solid #eee;padding-top:18px;margin-top:20px;font-size:11px;color:#888}footer{background:#fff;border-top:1px solid var(--border);padding:30px 0;margin-top:20px;color:#777}
+.overlay{display:none;position:fixed;inset:0;background:#0008;z-index:100;align-items:center;justify-content:center;padding:15px}.overlay.show{display:flex}.modal{position:relative;background:#fff;border-radius:14px;width:min(760px,100%);max-height:90vh;overflow:auto;padding:22px}.modal.small{width:min(420px,100%)}.close{position:absolute;left:10px;top:10px;background:#f1f1f1;border:0;border-radius:50%;width:32px;height:32px;font-size:21px}.detail{display:grid;grid-template-columns:1fr 1fr;gap:22px}.detail-art{background:#f7f7f8;border-radius:10px;min-height:260px;display:grid;place-items:center;font-size:130px}.detail h2{font-size:18px;line-height:2}.detail-price{font-weight:900;color:var(--red);font-size:22px;margin:18px 0}.btn{border:0;background:var(--red);color:#fff;border-radius:8px;padding:11px 17px;font-weight:900}.btn:hover{background:var(--red-dark)}.btn.full{width:100%}.field{width:100%;border:1px solid #ddd;border-radius:8px;padding:11px;margin:8px 0 14px;outline-color:var(--red)}
+.drawer{position:fixed;inset:0 auto 0 0;width:min(420px,100%);background:#fff;z-index:110;transform:translateX(-105%);transition:.25s;box-shadow:0 0 30px #0003;display:flex;flex-direction:column}.drawer.open{transform:translateX(0)}.drawer-head,.drawer-foot{padding:17px;border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:space-between;gap:10px}.drawer-body{padding:15px;overflow:auto;flex:1}.cart-row{display:grid;grid-template-columns:60px 1fr auto;gap:10px;align-items:center;border-bottom:1px solid #eee;padding:12px 0}.cart-row .emoji-box{height:60px;display:grid;place-items:center;border-radius:8px;font-size:32px}.qty{display:flex;gap:8px;align-items:center;margin-top:6px}.qty button{background:#fff;border:1px solid #ddd;border-radius:5px;width:24px;height:24px}.muted{color:#888;font-size:11px}.toast{position:fixed;bottom:20px;right:50%;transform:translate(50%,90px);background:#25263b;color:#fff;padding:12px 18px;border-radius:9px;z-index:200;transition:.25s}.toast.show{transform:translate(50%,0)}
+@media(max-width:1000px){.category-grid{grid-template-columns:repeat(4,1fr)}.store-product-grid{grid-template-columns:repeat(3,1fr)}.catalog-layout{grid-template-columns:190px 1fr}.hero-art{left:2%;opacity:.7}}
+@media(max-width:700px){.container{width:calc(100% - 20px)}.top-banner{font-size:10px}.header-main{height:auto;min-height:65px;flex-wrap:wrap;padding:9px 0;gap:9px}.logo{font-size:21px}.search-box{order:3;flex-basis:100%;height:40px}.header-actions{gap:5px}.header-button{height:34px;padding:0 8px;font-size:11px}.header-button .hide-mobile{display:none}.main-nav{overflow:auto;gap:17px;height:39px}.nav-location{display:none}.mega-menu{top:150px;grid-template-columns:repeat(2,1fr)}.hero{min-height:220px;padding:18px}.hero-art{font-size:90px;left:0;opacity:.55}.hero h1{font-size:24px}.hero p{font-size:11px}.hero-button{padding:9px 13px}.category-grid{grid-template-columns:repeat(4,1fr)}.category-icon{width:58px;height:58px;font-size:26px}.flash-section{grid-template-columns:1fr;padding:10px}.flash-intro strong{font-size:18px}.flash-card{min-width:145px;max-width:145px}.catalog-layout{grid-template-columns:1fr}.store-filters{position:static}.store-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.store-product{padding:9px}.store-product-photo{height:125px}.store-product-photo .emoji{font-size:58px}.store-banners{grid-template-columns:1fr}.benefits-row{grid-template-columns:repeat(2,1fr)}.catalog-toolbar{align-items:flex-start;flex-direction:column}.catalog-sorts{gap:4px}.store-sort{font-size:10px}.detail{grid-template-columns:1fr}.detail-art{min-height:190px}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="top-banner">پیشنهادهای ویژه خرید آنلاین <span>فروش ویژه</span> انتخاب بهتر، خرید آسان‌تر</div>
+<header class="site-header">
+ <div class="container header-main">
+  <a href="#" class="logo" onclick="goHome();return false">فروشگاه Ngermany<small>تجربه خرید آنلاین</small></a>
+  <div class="search-box"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg><input id="searchInput" placeholder="جستجو در میان هزاران کالا..." autocomplete="off"></div>
+  <div class="header-actions"><button class="header-button" onclick="openLogin()"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 3.5-6 8-6s7 2 8 6"/></svg><span id="loginLabel">ورود | ثبت‌نام</span></button><button class="header-button" onclick="toggleCart()"><svg viewBox="0 0 24 24"><path d="M3 4h2l2 12h12l3-8H6"/><circle cx="10" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg><span class="hide-mobile">سبد خرید</span><span class="cart-number" id="cartCount">۰</span></button></div>
+ </div>
+ <nav class="container main-nav"><button class="nav-category" onclick="toggleMega()">☷ دسته‌بندی کالاها</button><a onclick="chooseCategory('موبایل')">موبایل</a><a onclick="chooseCategory('دیجیتال')">کالای دیجیتال</a><a onclick="chooseCategory('خانه')">خانه و آشپزخانه</a><a onclick="chooseCategory('مد')">مد و پوشاک</a><a onclick="chooseCategory('زیبایی')">زیبایی و سلامت</a><a onclick="chooseCategory('سوپرمارکت')">سوپرمارکت</a><span class="nav-spacer"></span><span class="nav-location">⌖ ارسال به: تهران</span></nav>
+ <div class="mega-menu" id="megaMenu"><div class="mega-column"><h4>کالای دیجیتال</h4><a onclick="chooseCategory('موبایل')">گوشی موبایل</a><a onclick="chooseCategory('دیجیتال')">هدفون و اسپیکر</a><a onclick="chooseCategory('دیجیتال')">لپ‌تاپ و تبلت</a><a onclick="chooseCategory('دیجیتال')">ساعت هوشمند</a></div><div class="mega-column"><h4>خانه و آشپزخانه</h4><a onclick="chooseCategory('خانه')">لوازم برقی</a><a onclick="chooseCategory('خانه')">ظروف و سرو</a><a onclick="chooseCategory('خانه')">دکوراتیو</a><a onclick="chooseCategory('خانه')">ابزار خانه</a></div><div class="mega-column"><h4>مد و پوشاک</h4><a onclick="chooseCategory('مد')">لباس مردانه</a><a onclick="chooseCategory('مد')">لباس زنانه</a><a onclick="chooseCategory('مد')">کیف و کفش</a><a onclick="chooseCategory('مد')">اکسسوری</a></div><div class="mega-column"><h4>زیبایی و سلامت</h4><a onclick="chooseCategory('زیبایی')">عطر و ادکلن</a><a onclick="chooseCategory('زیبایی')">مراقبت پوست</a><a onclick="chooseCategory('زیبایی')">آرایشی</a><a onclick="chooseCategory('سوپرمارکت')">خوراکی و نوشیدنی</a></div></div>
+</header>
+<main class="container page-content">
+ <section class="hero"><div class="hero-content"><div class="hero-label">پیشنهادهای اختصاصی امروز</div><h1 id="heroTitle">خرید هوشمندانه، لذت بیشتر</h1><p id="heroText">محصولات محبوبت را با قیمت‌های جذاب پیدا کن و تجربه‌ای ساده از خرید آنلاین داشته باش.</p><button class="hero-button" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">مشاهده محصولات ←</button></div><div class="hero-art" id="heroArt">🛍️</div></section>
+ <div class="slider-dots"><span class="active"></span><span></span><span></span></div>
+ <section class="panel"><div class="section-title"><h2>دسته‌بندی‌های منتخب</h2><a href="#products">مشاهده همه ←</a></div><div class="category-grid"><div class="category-item" onclick="chooseCategory('موبایل')"><div class="category-icon">📱</div><b>موبایل</b></div><div class="category-item" onclick="chooseCategory('دیجیتال')"><div class="category-icon">💻</div><b>کالای دیجیتال</b></div><div class="category-item" onclick="chooseCategory('خانه')"><div class="category-icon">🏠</div><b>خانه و آشپزخانه</b></div><div class="category-item" onclick="chooseCategory('مد')"><div class="category-icon">👟</div><b>مد و پوشاک</b></div><div class="category-item" onclick="chooseCategory('زیبایی')"><div class="category-icon">🧴</div><b>زیبایی و سلامت</b></div><div class="category-item" onclick="chooseCategory('سوپرمارکت')"><div class="category-icon">🛒</div><b>سوپرمارکت</b></div><div class="category-item" onclick="chooseCategory('دیجیتال')"><div class="category-icon">🎮</div><b>لوازم گیمینگ</b></div><div class="category-item" onclick="chooseCategory('خانه')"><div class="category-icon">🪑</div><b>دکور خانه</b></div></div></section>
+ <section class="flash-section"><div class="flash-intro"><strong>شگفت‌انگیزها</strong><p>پیشنهادهای محدود امروز</p><div class="flash-timer"><span id="timerHours">08</span><span id="timerMinutes">24</span><span id="timerSeconds">59</span></div></div><div class="flash-products" id="flashProducts"></div></section>
+ <section class="benefits-row"><div>🚚 <b>ارسال سریع و مطمئن</b></div><div>🛡️ <b>ضمانت اصالت کالا</b></div><div>💳 <b>پرداخت امن</b></div><div>↩️ <b>هفت روز ضمانت بازگشت</b></div><div>☎️ <b>پشتیبانی مشتریان</b></div></section>
+ <section class="store-banners"><div class="store-banner banner-one"><div><h2>دنیای تکنولوژی</h2><p>انتخابی برای هر سلیقه</p></div><span>🎧</span></div><div class="store-banner banner-two"><div><h2>خانه‌ای زیباتر</h2><p>لوازم خانه و آشپزخانه</p></div><span>🏡</span></div><div class="store-banner banner-three"><div><h2>استایل جدید</h2><p>مد و پوشاک</p></div><span>👟</span></div></section>
+ <section id="products" class="catalog-section"><div class="section-title"><h2>منتخب محصولات برای شما</h2><a onclick="resetStoreFilters()">پاک کردن فیلترها ×</a></div><div class="catalog-layout"><aside class="store-filters"><h3>فیلتر محصولات</h3><div class="filter-part"><b>دسته‌بندی</b><label><input type="checkbox" class="store-cat-filter" value="موبایل"> موبایل</label><label><input type="checkbox" class="store-cat-filter" value="دیجیتال"> کالای دیجیتال</label><label><input type="checkbox" class="store-cat-filter" value="خانه"> خانه و آشپزخانه</label><label><input type="checkbox" class="store-cat-filter" value="مد"> مد و پوشاک</label><label><input type="checkbox" class="store-cat-filter" value="زیبایی"> زیبایی و سلامت</label><label><input type="checkbox" class="store-cat-filter" value="سوپرمارکت"> سوپرمارکت</label></div><div class="filter-part"><b>محدوده قیمت</b><select id="storePriceFilter"><option value="all">همه قیمت‌ها</option><option value="low">کمتر از ۵ میلیون</option><option value="middle">۵ تا ۲۰ میلیون</option><option value="high">بیشتر از ۲۰ میلیون</option></select></div><div class="filter-part"><label><input type="checkbox" id="storeStockFilter"> فقط کالاهای موجود</label><label><input type="checkbox" id="storeDiscountFilter"> فقط تخفیف‌دارها</label></div></aside><div><div class="catalog-toolbar"><strong id="storeResultTitle">همه محصولات</strong><div class="catalog-sorts"><span>مرتب‌سازی:</span><button class="store-sort active" data-sort="popular">پربازدیدترین</button><button class="store-sort" data-sort="cheap">ارزان‌ترین</button><button class="store-sort" data-sort="expensive">گران‌ترین</button><button class="store-sort" data-sort="discount">بیشترین تخفیف</button></div></div><div class="store-product-grid" id="storeProductGrid"></div></div></div></section>
+</main>
+<footer><div class="container"><div class="logo">فروشگاه Ngermany</div><p>تجربه خریدی آسان و مطمئن</p><div class="footer-grid"><div><h3>با فروشگاه</h3><a>درباره ما</a><a>تماس با ما</a><a>فرصت‌های شغلی</a></div><div><h3>خدمات مشتریان</h3><a>پرسش‌های متداول</a><a>رویه بازگشت کالا</a><a>شرایط استفاده</a></div><div><h3>راهنمای خرید</h3><a>نحوه ثبت سفارش</a><a>رویه ارسال</a><a>شیوه‌های پرداخت</a></div><div><h3>همراه ما</h3><a>شبکه‌های اجتماعی</a><a>باشگاه مشتریان</a></div></div><div class="copyright">نمونه مستقل فروشگاه اینترنتی؛ به سامانه و پرداخت رسمی دیجی‌کالا متصل نیست.</div></div></footer>
+<div class="overlay" id="detailOverlay" onclick="if(event.target===this)closeDetail()"><div class="modal"><button class="close" onclick="closeDetail()">×</button><div class="detail"><div class="detail-art" id="detailArt"></div><div><div class="muted">فروشنده منتخب | ضمانت اصالت کالا</div><h2 id="detailName"></h2><div class="muted">⭐ ۴.۶ از ۵ | دیدگاه کاربران</div><p>این محصول با بسته‌بندی مناسب و شرایط بازگشت مطابق قوانین فروشگاه عرضه می‌شود.</p><div class="detail-price" id="detailPrice"></div><button class="btn full" id="detailAdd">افزودن به سبد خرید</button></div></div></div></div>
+<div class="overlay" id="loginOverlay" onclick="if(event.target===this)closeModal('loginOverlay')"><div class="modal small"><button class="close" onclick="closeModal('loginOverlay')">×</button><h2>ورود یا ثبت‌نام</h2><p class="muted">شماره موبایل خود را وارد کنید.</p><input class="field" id="phone" inputmode="numeric" placeholder="شماره موبایل"><button class="btn full" onclick="loginDemo()">ادامه</button><p class="muted" id="loginMessage"></p></div></div>
+<div class="overlay" id="checkoutOverlay" onclick="if(event.target===this)closeModal('checkoutOverlay')"><div class="modal small"><button class="close" onclick="closeModal('checkoutOverlay')">×</button><h2>تکمیل سفارش</h2><label>نام و نام خانوادگی</label><input class="field" id="buyerName" placeholder="نام شما"><label>آدرس تحویل</label><textarea class="field" id="buyerAddress" rows="3" placeholder="آدرس کامل"></textarea><label>شماره تماس</label><input class="field" id="buyerPhone" placeholder="شماره موبایل"><button class="btn full" onclick="submitOrder()">ثبت سفارش</button></div></div>
+<div class="drawer" id="cartDrawer"><div class="drawer-head"><b>سبد خرید شما</b><button class="close" style="position:static" onclick="toggleCart()">×</button></div><div class="drawer-body" id="cartItems"></div><div class="drawer-foot"><b>مبلغ قابل پرداخت</b><b id="cartTotal">۰ تومان</b><button class="btn full" onclick="checkout()">ادامه و ثبت سفارش</button></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const API_BASE = "https://ngermany-api.samyarkhakpwr04.workers.dev";
+let products = [];
+let cart = JSON.parse(localStorage.getItem('shopCart') || '[]');
+let wishes = JSON.parse(localStorage.getItem('shopWishes') || '[]');
+let category = '', query = '', sort = 'popular';
+const $ = id => document.getElementById(id);
+const money = n => new Intl.NumberFormat('fa-IR').format(Number(n || 0)) + ' تومان';
+
+function toast(s) {
+  $('toast').textContent = s;
+  $('toast').classList.add('show');
+  setTimeout(() => $('toast').classList.remove('show'), 2600);
+}
+function art(p, cls) {
+  const emoji = p.emoji || '📦';
+  const color = p.color || '#f2f3f5';
+  if (p.image) return `<div class="${cls}" style="background:${color}"><img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.name)}" style="width:100%;height:100%;object-fit:contain"></div>`;
+  return `<div class="${cls}" style="background:${color}"><span class="emoji">${emoji}</span></div>`;
+}
+function escapeHtml(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function normalizeProduct(p) {
+  const price = Number(p.price || 0);
+  const old = Number(p.old || p.original_price || price);
+  return {
+    id: Number(p.id), name: p.name || 'محصول بدون نام',
+    cat: p.cat || p.category_name || 'بدون دسته‌بندی',
+    price, old, emoji: p.emoji || '📦', color: p.color || '#f2f3f5',
+    image: p.image || p.image_url || '',
+    discount: Number(p.discount || (old > price ? Math.round((old-price)/old*100) : 0)),
+    stock: Number(p.stock || 0) > 0, rate: Number(p.rate || 5)
+  };
+}
+async function loadStore() {
+  $('storeProductGrid').innerHTML = '<div class="store-empty">در حال دریافت محصولات فروشگاه…</div>';
+  try {
+    const [pr, cr] = await Promise.all([
+      fetch(API_BASE + '/api/products'),
+      fetch(API_BASE + '/api/categories')
+    ]);
+    if (!pr.ok) throw new Error('دریافت محصولات ناموفق بود');
+    const pd = await pr.json();
+    products = (pd.products || []).map(normalizeProduct);
+    renderProducts(); renderFlash(); renderCart();
+    if (cr.ok) {
+      const cd = await cr.json();
+      const names = (cd.categories || []).map(x => x.name);
+      if (names.length) console.info('دسته‌بندی‌های Ngermany:', names);
+    }
+    if (!products.length) $('storeProductGrid').innerHTML = '<div class="store-empty">هنوز محصولی در فروشگاه ثبت نشده است. محصولات باید از طریق پنل مدیریت اضافه شوند.</div>';
+  } catch (e) {
+    $('storeProductGrid').innerHTML = '<div class="store-empty">ارتباط با سرور برقرار نشد. آدرس API و انتشار Worker را بررسی کنید.</div>';
+    console.error(e);
+  }
+}
+function renderProducts() {
+  let a = products.filter(p => (!category || p.cat === category) && (!query || (p.name + ' ' + p.cat).toLowerCase().includes(query.toLowerCase())));
+  const cs = [...document.querySelectorAll('.store-cat-filter:checked')].map(x => x.value);
+  if (cs.length) a = a.filter(p => cs.includes(p.cat));
+  const r = $('storePriceFilter').value;
+  if (r === 'low') a = a.filter(p => p.price < 5000000);
+  if (r === 'middle') a = a.filter(p => p.price >= 5000000 && p.price <= 20000000);
+  if (r === 'high') a = a.filter(p => p.price > 20000000);
+  if ($('storeStockFilter').checked) a = a.filter(p => p.stock);
+  if ($('storeDiscountFilter').checked) a = a.filter(p => p.discount > 0);
+  if (sort === 'cheap') a.sort((x,y) => x.price-y.price);
+  if (sort === 'expensive') a.sort((x,y) => y.price-x.price);
+  if (sort === 'discount') a.sort((x,y) => y.discount-x.discount);
+  $('storeResultTitle').textContent = new Intl.NumberFormat('fa-IR').format(a.length) + ' محصول';
+  $('storeProductGrid').innerHTML = a.length ? a.map(p => `
+    <article class="store-product" onclick="openProduct(${p.id})">
+      <button class="store-heart ${wishes.includes(p.id)?'active':''}" onclick="event.stopPropagation();toggleWish(${p.id})">${wishes.includes(p.id)?'♥':'♡'}</button>
+      ${p.discount ? `<span class="discount-badge">${p.discount}%</span>` : ''}
+      ${art(p,'store-product-photo')}
+      <h3>${escapeHtml(p.name)}</h3>
+      <div class="store-product-meta"><span class="store-rating">★ ${p.rate.toFixed(1)}</span><span>${p.stock?'موجود در انبار':'ناموجود'}</span></div>
+      <div class="store-product-price">${money(p.price)}</div>
+      ${p.old > p.price ? `<div class="store-product-old">${money(p.old)}</div>` : ''}
+    </article>`).join('') : '<div class="store-empty">محصولی پیدا نشد.</div>';
+}
+function renderFlash() {
+  $('flashProducts').innerHTML = products.filter(p => p.discount >= 18).slice(0,12).map(p =>
+    `<div class="flash-card" onclick="openProduct(${p.id})">${p.discount?`<span class="discount-badge">${p.discount}%</span>`:''}${art(p,'flash-photo')}<h3>${escapeHtml(p.name)}</h3><div class="flash-price">${money(p.price)}</div>${p.old>p.price?`<div class="flash-old">${money(p.old)}</div>`:''}</div>`
+  ).join('');
+}
+function chooseCategory(c) {
+  category=c; query=''; $('searchInput').value='';
+  document.querySelectorAll('.store-cat-filter').forEach(x=>x.checked=x.value===c);
+  $('megaMenu').classList.remove('active'); renderProducts();
+  $('products').scrollIntoView({behavior:'smooth'});
+}
+function resetStoreFilters() {
+  category=''; query=''; $('searchInput').value='';
+  document.querySelectorAll('.store-cat-filter').forEach(x=>x.checked=false);
+  $('storePriceFilter').value='all'; $('storeStockFilter').checked=false;
+  $('storeDiscountFilter').checked=false; renderProducts();
+}
+function goHome(){resetStoreFilters();scrollTo({top:0,behavior:'smooth'});}
+function toggleMega(){$('megaMenu').classList.toggle('active');}
+document.addEventListener('click',e=>{if(!e.target.closest('.main-nav')&&!e.target.closest('.mega-menu'))$('megaMenu').classList.remove('active');});
+$('searchInput').addEventListener('input',e=>{query=e.target.value.trim();category='';renderProducts();});
+document.querySelectorAll('.store-cat-filter').forEach(x=>x.addEventListener('change',()=>{category='';renderProducts();}));
+['storePriceFilter','storeStockFilter','storeDiscountFilter'].forEach(id=>$(id).addEventListener('change',renderProducts));
+document.querySelectorAll('.store-sort').forEach(b=>b.onclick=()=>{document.querySelectorAll('.store-sort').forEach(x=>x.classList.remove('active'));b.classList.add('active');sort=b.dataset.sort;renderProducts();});
+
+function openProduct(id) {
+  const p=products.find(x=>x.id===id); if(!p)return;
+  $('detailArt').innerHTML=art(p,'detail-art'); $('detailName').textContent=p.name;
+  $('detailPrice').textContent=money(p.price);
+  $('detailAdd').disabled=!p.stock; $('detailAdd').textContent=p.stock?'افزودن به سبد خرید':'ناموجود';
+  $('detailAdd').onclick=()=>addCart(id); $('detailOverlay').classList.add('show');
+}
+function closeDetail(){$('detailOverlay').classList.remove('show');}
+function toggleWish(id){wishes=wishes.includes(id)?wishes.filter(x=>x!==id):[...wishes,id];localStorage.setItem('shopWishes',JSON.stringify(wishes));renderProducts();toast('علاقه‌مندی‌ها به‌روزرسانی شد');}
+function addCart(id){
+  const p=products.find(x=>x.id===id); if(!p||!p.stock){toast('این کالا موجود نیست');return;}
+  const x=cart.find(y=>y.id===id); if(x)x.qty++;else cart.push({id,qty:1});
+  saveCart(); closeDetail(); toast('محصول به سبد خرید اضافه شد');
+}
+function saveCart(){localStorage.setItem('shopCart',JSON.stringify(cart));renderCart();}
+function renderCart(){
+  $('cartCount').textContent=new Intl.NumberFormat('fa-IR').format(cart.reduce((s,x)=>s+x.qty,0));
+  $('cartItems').innerHTML=cart.length?cart.map(x=>{
+    const p=products.find(y=>y.id===x.id); if(!p)return '';
+    return `<div class="cart-row">${art(p,'emoji-box')}<div><b>${escapeHtml(p.name)}</b><div class="muted">${money(p.price)}</div><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button>${x.qty}<button onclick="changeQty(${p.id},1)">+</button></div></div><button onclick="removeCart(${p.id})">×</button></div>`;
+  }).join(''):'<div class="store-empty">سبد خرید شما خالی است 🛒</div>';
+  $('cartTotal').textContent=money(cart.reduce((s,x)=>{const p=products.find(y=>y.id===x.id);return s+(p?p.price*x.qty:0);},0));
+}
+function changeQty(id,d){const x=cart.find(y=>y.id===id);if(x)x.qty+=d;if(x&&x.qty<=0)removeCart(id);else saveCart();}
+function removeCart(id){cart=cart.filter(x=>x.id!==id);saveCart();}
+function toggleCart(){$('cartDrawer').classList.toggle('open');}
+function openLogin(){$('loginOverlay').classList.add('show');}
+function closeModal(id){$(id).classList.remove('show');}
+function loginDemo(){toast('ورود مشتری هنوز فعال نشده؛ برای سفارش فقط اطلاعات تحویل را وارد کنید.');}
+function checkout(){if(!cart.length){toast('سبد خرید خالی است');return;}toggleCart();$('checkoutOverlay').classList.add('show');}
+async function submitOrder(){
+  const name=$('buyerName').value.trim(), address=$('buyerAddress').value.trim(), phone=$('buyerPhone').value.trim();
+  if(!name||!address||phone.length<10){toast('نام، آدرس و شماره تماس معتبر را وارد کنید');return;}
+  const payload={
+    customer:{full_name:name,phone},
+    recipient:{full_name:name,phone,address},
+    items:cart.map(x=>({product_id:x.id,quantity:x.qty})),
+    shipping_cost:0
+  };
+  const button=document.querySelector('#checkoutOverlay .btn.full');
+  button.disabled=true; button.textContent='در حال ثبت سفارش…';
+  try{
+    const res=await fetch(API_BASE+'/api/orders',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const data=await res.json();
+    if(!res.ok||!data.success)throw new Error(data.error||'ثبت سفارش انجام نشد');
+    cart=[];saveCart();closeModal('checkoutOverlay');
+    toast('سفارش '+data.order_number+' با موفقیت ثبت شد');
+    $('buyerName').value='';$('buyerAddress').value='';$('buyerPhone').value='';
+    await loadStore();
+  }catch(e){toast(e.message||'خطا در ارتباط با سرور');}
+  finally{button.disabled=false;button.textContent='ثبت سفارش';}
+}
+let remain=28800;
+setInterval(()=>{remain=remain>0?remain-1:28800;$('timerHours').textContent=String(Math.floor(remain/3600)).padStart(2,'0');$('timerMinutes').textContent=String(Math.floor(remain%3600/60)).padStart(2,'0');$('timerSeconds').textContent=String(remain%60).padStart(2,'0');},1000);
+const slides=[['خرید هوشمندانه، لذت بیشتر','محصولات محبوبت را با قیمت‌های جذاب پیدا کن.','🛍️'],['دنیای تکنولوژی در دسترس تو','از موبایل تا لوازم جانبی، انتخاب کن و لذت ببر.','📱'],['خانه‌ای زیباتر با انتخاب بهتر','وسایل مورد نیازت را یک‌جا پیدا کن.','🏡']];
+let si=0;setInterval(()=>{si=(si+1)%3;$('heroTitle').textContent=slides[si][0];$('heroText').textContent=slides[si][1];$('heroArt').textContent=slides[si][2];document.querySelectorAll('.slider-dots span').forEach((x,i)=>x.classList.toggle('active',i===si));},5200);
+if(localStorage.getItem('shopUser'))$('loginLabel').textContent='حساب کاربری';
+loadStore();
+</script>
+
+</body>
+</html>
